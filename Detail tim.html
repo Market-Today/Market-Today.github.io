@@ -1,0 +1,470 @@
+<html lang="id">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Tim Saya</title> 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+    .header {
+      background:#FF8C00;
+      color: #fff;
+      padding: 1px 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .back-btn {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .content {
+      background: #fff;
+      padding-bottom: 100px;
+    }
+    .level-tabs {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      background: #fff;
+    }
+    .level-tab {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+    .level-tab.active {
+      font-weight: bold;
+      border-color: #222;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 10px 15px;
+    }
+    .tab-content.active {
+      display: block;
+    }
+
+    .team-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .team-item {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      background-color: #fff;
+    }
+    .team-item:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .team-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .team-id {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .team-date {
+      font-size: 12px;
+      color: #666;
+    }
+    .amount {
+      margin-left: auto;
+      font-weight: bold;
+    }
+    .no-data {
+      text-align: center;
+      padding: 20px;
+      color: #999;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-around;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+    .nav-icon {
+      font-size: 24px;
+      color: #666;
+    }
+  </style> 
+ </head> 
+ <body> 
+  <div class="header"> 
+   <span class="back-btn">❮</span> 
+   <h2>Tim Saya</h2> 
+   <div></div> 
+  </div> 
+  
+
+
+
+<html lang="id">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+  <link href="https://m-asento.com/public/css/home.ecc31d34.css" rel="prefetch"> 
+  <link href="https://m-asento.com/public/css/app.bd822123.css" rel="preload" as="style"> 
+  <link href="https://m-asento.com/public/css/chunk-vendors.331f546b.css" rel="stylesheet"> 
+  <title>Rumah</title> 
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f5f6fa;
+      color: #2f3640;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: auto;
+      padding: 1rem;
+      padding-bottom: 4rem; /* ruang untuk nav bawah */
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #e84118;
+    }
+
+    .user-profile {
+      width: 40px;
+      height: 40px;
+      background: #ccc;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .banner {
+      background: linear-gradient(135deg, #e84118, #fbc518);
+      color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner h2 {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .banner p {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    .banner::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 80px;
+      height: 80px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      filter: blur(20px);
+    }
+
+    /* Tabs */
+    .product-tabs {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1rem;
+    }
+
+    .tab-btn {
+      flex: 1;
+      background: none;
+      border: none;
+      font-weight: bold;
+      padding: 0.75rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      color: #666;
+    }
+
+    .tab-btn.active {
+      color: #e84118;
+      border-bottom: 2px solid #e84118;
+    }
+
+    /* Cards */
+    .cards {
+      margin-top: 1rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 0.8rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+.card .price {
+  font-size: 1.2rem;
+  color: #e84118;
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+
+    .
+
+    .card ul {
+      list-style: none;
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .card ul li {
+      margin-bottom: 0.3rem;
+    }
+
+    .card button {
+      width: 100%;
+      background: #e84118;
+      color: white;
+      border: none;
+      padding: 0.30rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      margin-top: 0.8rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .card button:hover {
+      background: #d63031;
+    }
+
+    /* Footer Navigation */
+    nav.footer-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 0.65rem 0;
+      box-shadow: 0 -1px 10px rgba(0,0,0,0.05);
+    }
+
+    nav.footer-nav a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: #666;
+    }
+
+    nav.footer-nav a.active {
+      color: #e84118;
+      font-weight: bold;
+    }
+
+    nav.footer-nav svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+      margin-bottom: 0.25rem;
+    }
+
+    @media (min-width: 600px) {
+      .container {
+        padding: 2rem;
+      }
+    }
+
+    button.locked {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    button.locked:hover {
+      background: #ccc;
+    }
+
+
+  </style> 
+  <link rel="preload" as="script" href="https://m-asento.com/public/msg/notifIt.js">
+  <link rel="preload" as="script" href="https://code.jquery.com/jquery-1.11.3.min.js">
+  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+ </head> 
+ <body> 
+
+   <!-- Tabs --> 
+   <div class="product-tabs"> 
+    <button class="tab-btn active" data-tab="produk">     Tingkat 1 (0)</button> 
+    <button class="tab-btn" data-tab="produk-premium">     Tingkat 2 (0)</button> 
+        <button class="tab-btn" data-tab="produk-premium">     Tingkat 3 (0)</button> 
+   </div> 
+
+
+
+
+
+
+
+
+
+    <!-- Produk Premium -->
+    <div id="produk-premium" class="product-section">
+        <!-- Konten pesanan akan ditampilkan di sini -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const sections = document.querySelectorAll('.product-section');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active state dari semua tab dan sembunyikan semua section
+                    tabs.forEach(t => t.classList.remove('active'));
+                    sections.forEach(s => s.style.display = 'none');
+
+                    // Aktifkan tab yang diklik dan tampilkan section yang sesuai
+                    tab.classList.add('active');
+                    const target = document.getElementById(tab.dataset.tab);
+                    target.style.display = 'grid';
+
+                    // Jika tab pesanan diklik, tampilkan pesan tidak ada pesanan
+                    if (tab.dataset.tab === 'produk-premium') {
+                        target.innerHTML = '<p style="text-align: center; padding: 50px;">Tidak ada Pesanan.</p>';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+   <!-- Tab 1 - Tingkat 1 --> 
+   <div class="tab-content active"> 
+    <ul class="team-list"> 
+     <li class="no-data">Tidak ada data</li> 
+    </ul> 
+   </div> 
+   <!-- Tab 2 - Tingkat 2 --> 
+   <div class="tab-content"> 
+    <ul class="team-list"> 
+     <li class="no-data">Tidak ada data</li> 
+    </ul> 
+   </div> 
+   <!-- Tab 3 - Tingkat 3 --> 
+   <div class="tab-content"> 
+    <ul class="team-list"> 
+     <li class="no-data">Tidak ada data</li> 
+    </ul> 
+   </div> 
+   <script type="text/javascript">
+    function showTab(index) {
+      const tabs = document.querySelectorAll('.level-tab');
+      const contents = document.querySelectorAll('.tab-content');
+
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+        contents[i].classList.toggle('active', i === index);
+      });
+    }
+  </script> 
+  </div>
+ </body>
+</html>
+
+
+    <!-- Produk Premium -->
+    <div id="produk-premium" class="product-section">
+        <!-- Konten pesanan akan ditampilkan di sini -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const sections = document.querySelectorAll('.product-section');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active state dari semua tab dan sembunyikan semua section
+                    tabs.forEach(t => t.classList.remove('active'));
+                    sections.forEach(s => s.style.display = 'none');
+
+                    // Aktifkan tab yang diklik dan tampilkan section yang sesuai
+                    tab.classList.add('active');
+                    const target = document.getElementById(tab.dataset.tab);
+                    target.style.display = 'grid';
+
+                    // Jika tab pesanan diklik, tampilkan pesan tidak ada pesanan
+                    if (tab.dataset.tab === 'produk-premium') {
+                        target.innerHTML = '<p style="text-align: center; padding: 50px;"></i>';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
